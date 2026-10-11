@@ -342,6 +342,25 @@ h2 em,.acc{background:var(--gloop);background-size:300% 100%;-webkit-background-
 .spot{background:radial-gradient(circle,rgba(255,255,255,.06),transparent 70%)}
 html,body{background:#17171c;color:#f5f5f7}
 .pimg{mix-blend-mode:normal!important}
+
+/* ===== AWARDS & TRAINING ===== */
+@media(max-width:960px){.links{display:none}.menu-btn{display:block}}
+.rec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px);margin-top:56px;align-items:start}
+.rec-col>h3{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.02em;color:var(--mute);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.rec-col>h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.rcard{position:relative;background:var(--card);border-radius:24px;padding:24px 26px;margin-bottom:14px;box-shadow:inset 0 0 0 1px var(--line),0 20px 40px -34px rgba(0,0,0,.3);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.rcard:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px var(--line),0 30px 50px -30px rgba(109,94,252,.5)}
+.rcard.hl{background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box;border:1.5px solid transparent}
+.rcard .rt{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.rcard .rt b{font-weight:500;color:var(--ink-2)}
+.rcard .rt .new{background:var(--grad);color:#fff;border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.02em}
+.rcard h4{margin:10px 0 8px;font-size:clamp(18px,1.7vw,23px);font-weight:700;letter-spacing:-.03em;line-height:1.2}
+.rcard p{font-size:14px;color:var(--ink-2);line-height:1.55}
+.rcard .meta{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.rcard .meta span{font-size:12px;font-weight:600;padding:5px 12px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);color:var(--ink-2)}
+.rcard .stack{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.rcard .stack span{font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:999px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink-2)}
+@media(max-width:900px){.rec-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -353,7 +372,7 @@ html,body{background:#17171c;color:#f5f5f7}
   <a class="brand" href="#top" aria-label="Shreyas V, back to top"><span class="mark">SV</span><span class="brand-name">Shreyas V</span></a>
   <nav class="links" id="links" aria-label="Primary">
     <span class="pill" id="pill"></span>
-    <a href="#about">About</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#experience">Experience</a><a href="#achievements">Achievements</a><a href="#recognition">Awards</a><a href="#contact">Contact</a>
   </nav>
   <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="overlay">Menu</button>
 </header>
@@ -364,7 +383,8 @@ html,body{background:#17171c;color:#f5f5f7}
   <a href="#certifications" style="--i:2"><small>03</small>Certifications</a>
   <a href="#experience" style="--i:3"><small>04</small>Experience</a>
   <a href="#achievements" style="--i:4"><small>05</small>Achievements</a>
-  <a href="#contact" style="--i:5"><small>06</small>Contact</a>
+  <a href="#recognition" style="--i:5"><small>06</small>Awards</a>
+<a href="#contact" style="--i:6"><small>07</small>Contact</a>
 </div>
 
 <main id="top">
@@ -531,11 +551,34 @@ html,body{background:#17171c;color:#f5f5f7}
   </div>
 </section>
 
+<!-- RECOGNITION & TRAINING -->
+<section class="sec" id="recognition">
+<div class="wrap">
+<p class="tag rv">06 — Recognition &amp; training</p>
+<h2 class="rv-mask"><span>Awards &amp; <em>learning.</em></span></h2>
+<div class="rec-grid">
+<div class="rec-col">
+<h3>Awards &amp; recognition</h3>
+<article class="rcard hl rv" style="--i:0"><div class="rt"><span class="new">Latest</span><b>TCS Gems</b><span>6 October 2026</span></div><h4>On the Spot Award</h4><p>Recognized for outstanding contribution and acknowledged as an inspiring role model to colleagues.</p></article>
+<article class="rcard rv" style="--i:1"><div class="rt"><b>TCS OP Pohjola</b><span>Azure Managed Services</span></div><h4>Technical Excellence Award</h4><p>Received team/project recognition for technical excellence and contribution to Azure Managed Services.</p></article>
+<article class="rcard rv" style="--i:2"><div class="rt"><b>TCS</b></div><h4>Certificate of Recognition</h4><p>Recognized by TCS Leadership and OP Leadership for outstanding contribution to Azure MS.</p></article>
+</div>
+<div class="rec-col">
+<h3>Academic achievements &amp; additional training</h3>
+<article class="rcard rv" style="--i:0"><div class="rt"><b>IIT Kharagpur / SWAYAM</b><span>Jul–Sep 2023</span></div><h4>NPTEL Elite Certification — Database Management System</h4><div class="meta"><span>Consolidated score: 69%</span></div></article>
+<article class="rcard rv" style="--i:1"><div class="rt"><b>IIT Kharagpur / SWAYAM</b><span>Jan–Apr 2024</span></div><h4>NPTEL Online Certification — Programming in Java</h4><div class="meta"><span>Consolidated score: 57%</span></div></article>
+<article class="rcard rv" style="--i:2"><div class="rt"><b>NCICT ’24</b><span>8–9 March 2024</span></div><h4>Technical Paper Presentation</h4><p>Presented “Home Automation Utilizing NodeMCU with IoT Integration” at the National Conference on Innovative Computing Techniques, Dr. M.G.R. Educational and Research Institute, Chennai.</p></article>
+<article class="rcard rv" style="--i:3"><div class="rt"><b>Capgemini / TNS India Foundation</b><span>2023–2024</span></div><h4>Campus to Technical Careers Training Program</h4><p>Completed training in:</p><div class="stack"><span>SQL</span><span>Core Java 8</span><span>JPA with Hibernate</span><span>Git</span><span>Spring 5.0</span><span>Spring Boot</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span><span>Angular 7</span><span>Soft skills</span></div></article>
+</div>
+</div>
+</div>
+</section>
+
 <!-- CONTACT -->
 <section class="sec contact" id="contact">
   <div class="wrap" style="position:relative">
     <svg class="badge" viewBox="0 0 140 140" aria-hidden="true"><defs><path id="c" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><text><textPath href="#c">SAY HELLO • SAY HELLO • SAY HELLO • </textPath></text></svg>
-    <p class="tag rv">06 — Contact</p>
+    <p class="tag rv">07 — Contact</p>
     <h2 id="cHead" aria-label="Let's build something together.">Let's build<br><em>something together.</em></h2>
     <div class="mail rv">
       <a class="big" id="mailLink" href="mailto:shreyasvpersonal@gmail.com">shreyasvpersonal@gmail.com</a>
@@ -627,7 +670,8 @@ const ACH=[
  {l:'Automation',c:'Azure infrastructure with Terraform; CI/CD via Azure DevOps and GitHub Actions.',t:'Terraform',g:'Tf'},
  {l:'Environments supported',c:'Development, QA, UAT and Production PostgreSQL.',n:4,g:'Pg'},
  {l:'Microsoft certifications',c:'Azure Administration, DevOps, AI, Databricks and SQL AI.',n:5,g:'Ms'},
- {l:'Years at TCS',c:'Since April 2025 as DevOps & Database Engineer.',n:1.7,d:1,s:'+',g:'Yr'}];
+ {l:'TCS awards',c:'On the Spot, Technical Excellence and Certificate of Recognition.',n:3,g:'Aw'},
+{l:'Years at TCS',c:'Since April 2025 as DevOps & Database Engineer.',n:1.7,d:1,s:'+',g:'Yr'}];
 const track=$('#track');
 track.innerHTML=ACH.map((a,i)=>'<div class="acard"><div class="top"><div class="logo" aria-hidden="true">'+a.g+'</div><span class="idx">'+String(i+1).padStart(2,'0')+' / '+String(ACH.length).padStart(2,'0')+'</span></div><div class="bot"><div><div class="lb">'+a.l+'</div><div class="cp">'+a.c+'</div></div>'+(a.n!=null?'<div class="num" data-n="'+a.n+'" data-d="'+(a.d||0)+'" data-s="'+(a.s||'')+'" aria-label="'+a.n+(a.s||'')+'">0</div>':'<div class="num t">'+a.t+'</div>')+'</div></div>').join('')+'<div class="end">and counting →</div>';
 const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const n=e.target.querySelector('[data-n]');if(!n)return;
@@ -738,7 +782,7 @@ const cmd=document.createElement('div');cmd.className='cmd';cmd.setAttribute('ro
 cmd.innerHTML='<div class="cmd-box"><input placeholder="Jump to a section or run an action…" aria-label="Search commands"><ul role="listbox"></ul></div>';document.body.appendChild(cmd);
 const inp=cmd.querySelector('input'),ul=cmd.querySelector('ul');
 const go=id=>()=>document.getElementById(id).scrollIntoView({behavior:RM?'auto':'smooth'});
-const ITEMS=[['About','section',go('about')],['Skills','section',go('skills')],['Certifications','section',go('certifications')],['Experience','section',go('experience')],['Achievements','section',go('achievements')],['Contact','section',go('contact')],
+const ITEMS=[['About','section',go('about')],['Skills','section',go('skills')],['Certifications','section',go('certifications')],['Experience','section',go('experience')],['Achievements','section',go('achievements')],['Awards & training','section',go('recognition')],['Contact','section',go('contact')],
  ['Play spoken intro','action',()=>{go('hero')();setTimeout(()=>document.getElementById('introBtn').click(),500)}],
  ['Copy email','action',()=>document.getElementById('copyBtn').click()],
  ['Open GitHub','link',()=>window.open('https://github.com/Shreyasv006','_blank','noopener')],
